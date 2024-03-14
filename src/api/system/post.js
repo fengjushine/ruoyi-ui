@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 
-// 查询岗位列表
+// 查询话题列表
 export function listPost(query) {
   return request({
     url: '/system/post/list',
@@ -9,15 +9,15 @@ export function listPost(query) {
   })
 }
 
-// 查询岗位详细
-export function getPost(postId) {
+// 查询话题详细
+export function getPost(title) {
   return request({
-    url: '/system/post/' + postId,
+    url: '/system/post/' + title,
     method: 'get'
   })
 }
 
-// 新增岗位
+// 新增话题
 export function addPost(data) {
   return request({
     url: '/system/post',
@@ -26,7 +26,7 @@ export function addPost(data) {
   })
 }
 
-// 修改岗位
+// 修改话题
 export function updatePost(data) {
   return request({
     url: '/system/post',
@@ -35,10 +35,10 @@ export function updatePost(data) {
   })
 }
 
-// 删除岗位
-export function delPost(postId) {
+// 删除话题
+export function delPost(title) {
   return request({
-    url: '/system/post/' + postId,
+    url: '/system/post/' + title,
     method: 'delete'
   })
 }
